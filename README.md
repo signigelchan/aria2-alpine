@@ -1,6 +1,6 @@
-### A ease to use aria2 based alpine.
+## An ease to use aria2 based alpine.
 
-#### Usage
+### Usage
 
 ```
 docker run -d \
@@ -9,18 +9,18 @@ docker run -d \
         -e SECRET=YOUR_RPC_TOKEN \
         -v YOUR_SAVE_DOWNLOAD_PATH:/downloads \
         -v aria2_data:/data \
+	--restart=unless-stopped \
         signigelchan/aria2-alpine:latest
 ```
 
-#### With ``` Dockerfile ``` to build
+### With ``` Dockerfile ``` to build
 
 ```
 docker build \
         -t signigelchan/aria2-alpine:latest \
-        -t signigelchan/aria2-alpine:v1.35.0 \
-        .
+        -t signigelchan/aria2-alpine:v1.35.0 .
 ```
 
-### THANKS
+## THANKS
 
 - [XUJINKAI/aria2-with-webui](https://www.github.com/XUJINKAI/aria2-with-webui)
