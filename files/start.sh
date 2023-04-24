@@ -1,6 +1,6 @@
 #!/bin/sh
 
-CONF_FILE="/etc/aria2/aria2.conf"
+CONF_FILE="/config/aria2.conf"
 
 if [ -f ${CONF_FILE} ]; then
 	if [ `grep -c "rpc-secret=" ${CONF_FILE}` -eq '0' ]; then
@@ -10,4 +10,4 @@ if [ -f ${CONF_FILE} ]; then
 	fi
 fi
 
-aria2c --conf-path=/etc/aria2/aria2.conf
+aria2c --conf-path=${CONF_FILE}
